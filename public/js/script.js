@@ -20,7 +20,8 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     console.log(location)
 
-    const url = 'http://localhost:3000/weather?address=' + location;
+    //const url = 'http://localhost:3000/weather?address=' + location; // for localhost
+    const url = '/weather?address=' + location; // for heroku  
 
     fetch(url).then((response) => {
         response.json().then((data) => {
